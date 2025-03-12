@@ -24,6 +24,8 @@ security_groups = [aws_security_group.ec2_sg.name]
 resource "aws_security_group" "ec2_sg" {
   name        = "ec2_security_group"
   description = "Allow SSH, HTTP, and HTTPS traffic"
+lifecycle {
+    create_before_destroy = true
 
   # Allow SSH access from your IP
   ingress {
