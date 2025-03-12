@@ -13,7 +13,7 @@ user_data = <<-EOF
   yum install httpd -y
   systemctl start httpd
   systemctl enable httpd
-  echo "Succesfully completed Devops engineer practice exercise!" > /var/www/html/index.html
+  echo "Hello World!" > /var/www/html/index.html
 EOF
 
 ami = "ami-04aa00acb1165b32a"
