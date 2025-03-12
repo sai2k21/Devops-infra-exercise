@@ -26,6 +26,7 @@ resource "aws_security_group" "ec1_sg" {
   description = "Allow SSH, HTTP, and HTTPS traffic"
 lifecycle {
     create_before_destroy = true
+}
 
   # Allow SSH access from your IP
   ingress {
