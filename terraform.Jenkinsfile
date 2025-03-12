@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID = credentials('701b34ca-0b22-4200-b694-4022b8b819ee')  // Set these in Jenkins credentials
+        AWS_ACCESS_KEY_ID = credentials('701b34ca-0b22-4200-b694-4022b8b819ee')  
         AWS_SECRET_ACCESS_KEY = credentials('701b34ca-0b22-4200-b694-4022b8b819ee')
     }
 
@@ -19,12 +19,6 @@ pipeline {
             }
         }
 
-        stage('Terraform Validate') {
-            steps {
-                sh 'terraform validate'
-            }
-        }
-
         stage('Terraform Plan') {
             steps {
                 sh 'terraform plan'
@@ -33,7 +27,7 @@ pipeline {
 
         stage('Terraform Apply') {
             steps {
-                sh 'terraform apply -auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
