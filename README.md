@@ -26,7 +26,6 @@ Successfully created EC2 instance and web server.
 Verified the EC2 instance and web server using public IP.
 Checked CloudWatch for monitoring.
 # Outcome:
-
 Successful provisioning of AWS infrastructure using Terraform.
 Automated deployment using Jenkins CI/CD.
 EC2 instance running a web server accessible via public IP.
