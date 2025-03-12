@@ -18,11 +18,11 @@ EOF
 
 ami = "ami-04aa00acb1165b32a"
 instance_type = "t2.micro"
-security_groups = [aws_security_group.ec2_sg.name]
+security_groups = [aws_security_group.ec1_sg.name]
 }
 
-resource "aws_security_group" "ec2_sg" {
-  name        = "ec2_security_group"
+resource "aws_security_group" "ec1_sg" {
+  name        = "ec1_security_group"
   description = "Allow SSH, HTTP, and HTTPS traffic"
 lifecycle {
     create_before_destroy = true
